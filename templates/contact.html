@@ -1,20 +1,9 @@
 {% extends 'base.html' %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Remake Barber - Contact</title>
-	<link rel="icon" href="img/favicon.png" type="image/png">
-
-
-  <link rel="stylesheet" href="/static/styles.min.css">
-</head>
-<body>
-  {% block content %}
-  <!--================ Hero sm banner start =================-->  
-  <section class="mb-30px">
+{% load static %}
+{% block title %}Sensive Blog - Contact{% endblock %}
+{% block content %}
+<!--================ Hero sm banner start =================-->  
+<section class="mb-30px">
     <div class="container">
       <div class="hero-banner hero-banner--sm">
         <div class="hero-banner__content">
@@ -28,12 +17,10 @@
         </div>
       </div>
     </div>
-  </section>
-  <!--================ Hero sm banner end =================-->  
-
-
-  <!-- ================ contact section start ================= -->
-  <section class="section-margin--small section-margin">
+</section>
+<!--================ Hero sm banner end =================-->  
+<!-- ================ contact section start ================= -->
+<section class="section-margin--small section-margin">
     <div class="container">
       <div class="d-none d-sm-block mb-5 pb-4">
         {{html_map|safe}}
@@ -91,10 +78,5 @@
         </div>
       </div>
     </div>
-  </section>
-	<!-- ================ contact section end ================= -->
-
-  <script src="/static/scripts.js"></script>
-  {% endblock %}
-</body>
-</html>
+</section>
+{% endblock %}

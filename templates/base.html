@@ -1,14 +1,15 @@
 <!DOCTYPE html>
+<html lang="en"></html>
 {% load static %}
-<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Sensive Blog - Home</title>
-  <link rel="icon" href="./img/favicon.png" type="image/png">
-
-  <link rel="stylesheet" href="/static/styles.min.css">
+  {% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{%endblock %}</title>
+    <link rel="icon" href="./img/favicon.png" type="image/png"> 
+    <link rel="stylesheet" href="{% static 'styles.min.css' %}">
+  {% endblock %}
 </head>
 <body>
     <!--================Header Menu Area =================-->
@@ -43,6 +44,7 @@
   <!--================Header Menu Area =================-->
     {% block content %}
     {% endblock %}
+  {% block footer %}
   <!--================ Start Footer Area =================-->
   <footer class="footer-area section-padding">
     <div class="container">
@@ -115,5 +117,7 @@
     </div>
   </footer>
   <!--================ End Footer Area =================-->
+  {% endblock %}
+  <script src="/static/scripts.js"></script>
 </body>
 </html>

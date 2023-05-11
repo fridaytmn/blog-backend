@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
-<body>
-  {% block content %}
+{% block title %}{{ post.title }}Sensive Blog - Home{% endblock %}
+{% block content %}
   <main class="site-main">
     <!--================Hero Banner start =================-->  
     <section class="mb-30px">
@@ -124,7 +124,4 @@
     <!--================ End Blog Post Area =================-->
   </main>
 
-  {% endblock %}
-  <script src="{% static 'scripts.js' %}"></script>
-</body>
-</html>
+{% endblock %}
